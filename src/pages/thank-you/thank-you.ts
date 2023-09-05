@@ -47,9 +47,13 @@ export function initThankYou(params) {
 
   console.log(buttonEl);
 
-  buttonEl.addEventListener("click", function () {
+  const shadowButtonEl: any = buttonEl.shadowRoot.querySelector(".button");
+
+  console.log(shadowButtonEl);
+
+  shadowButtonEl.addEventListener("click", function () {
     console.log("HOLA");
-    /* params.goTo("/welcome"); */
+    params.goTo("/welcome");
   });
 
   return thankYouEl;

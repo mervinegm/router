@@ -675,9 +675,13 @@ function initWelcome(params) {
 </mi-footer>
 `;
     const buttonEl = welcomeEl.querySelector(".button");
-    buttonEl.addEventListener("click", function() {
+    console.log(buttonEl);
+    const shadowButtonEl = buttonEl.shadowRoot.querySelector(".button");
+    console.log(shadowButtonEl);
+    shadowButtonEl.addEventListener("click", function() {
         console.log("HOLA");
-    /* params.goTo("/step-1"); */ });
+        params.goTo("/step-1");
+    });
     return welcomeEl;
 }
 
@@ -1223,9 +1227,13 @@ function initStep1(params) {
   </mi-footer>
   `;
     const buttonEl = step1El.querySelector(".button");
-    buttonEl.addEventListener("click", function() {
+    console.log(buttonEl);
+    const shadowButtonEl = buttonEl.shadowRoot.querySelector(".button");
+    console.log(shadowButtonEl);
+    shadowButtonEl.addEventListener("click", function() {
         console.log("HOLA");
-    /* params.goTo("/thankyou"); */ });
+        params.goTo("/thankyou");
+    });
     return step1El;
 }
 
@@ -1276,9 +1284,12 @@ function initThankYou(params) {
   `;
     const buttonEl = thankYouEl.querySelector(".button");
     console.log(buttonEl);
-    buttonEl.addEventListener("click", function() {
+    const shadowButtonEl = buttonEl.shadowRoot.querySelector(".button");
+    console.log(shadowButtonEl);
+    shadowButtonEl.addEventListener("click", function() {
         console.log("HOLA");
-    /* params.goTo("/welcome"); */ });
+        params.goTo("/welcome");
+    });
     return thankYouEl;
 }
 

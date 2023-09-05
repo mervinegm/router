@@ -23,7 +23,7 @@
 104C:\Users\Personal\APX\Nivel 2\M09-ARQUITECTURA-WEB\m09c07HW\node_modules\lightningcss\node\index.js.flow133378062349040000 0
 107C:\Users\Personal\APX\Nivel 2\M09-ARQUITECTURA-WEB\m09c07HW\node_modules\@parcel\optimizer-css\node_modules133379780716000214 1
 95C:\Users\Personal\APX\Nivel 2\M09-ARQUITECTURA-WEB\m09c07HW\node_modules\@parcel\diagnostic\src133379780374705751 1
-64C:\Users\Personal\APX\Nivel 2\M09-ARQUITECTURA-WEB\m09c07HW\dist133382626193378900 1
+64C:\Users\Personal\APX\Nivel 2\M09-ARQUITECTURA-WEB\m09c07HW\dist133383505609714749 1
 70C:\Users\Personal\APX\Nivel 2\M09-ARQUITECTURA-WEB\m09c07HW\.gitignore133379784479770234 0
 89C:\Users\Personal\APX\Nivel 2\M09-ARQUITECTURA-WEB\m09c07HW\node_modules\type-fest\source133379780595092842 1
 95C:\Users\Personal\APX\Nivel 2\M09-ARQUITECTURA-WEB\m09c07HW\node_modules\css-tree\lib\tokenizer133379780620669510 1
@@ -62,7 +62,7 @@
 104C:\Users\Personal\APX\Nivel 2\M09-ARQUITECTURA-WEB\m09c07HW\node_modules\caniuse-lite\data\regions\BF.js133379779326170000 0
 90C:\Users\Personal\APX\Nivel 2\M09-ARQUITECTURA-WEB\m09c07HW\node_modules\@parcel\codeframe133379780093128328 1
 89C:\Users\Personal\APX\Nivel 2\M09-ARQUITECTURA-WEB\m09c07HW\node_modules\escalade\license133378062588950000 0
-86C:\Users\Personal\APX\Nivel 2\M09-ARQUITECTURA-WEB\m09c07HW\src\pages\step-1\step-1.ts133382625931391958 0
+86C:\Users\Personal\APX\Nivel 2\M09-ARQUITECTURA-WEB\m09c07HW\src\pages\step-1\step-1.ts133383505605686884 0
 120C:\Users\Personal\APX\Nivel 2\M09-ARQUITECTURA-WEB\m09c07HW\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\midl.c133378055845280000 0
 111C:\Users\Personal\APX\Nivel 2\M09-ARQUITECTURA-WEB\m09c07HW\node_modules\@parcel\codeframe\lib\codeframe.js.map133378055741810000 0
 74C:\Users\Personal\APX\Nivel 2\M09-ARQUITECTURA-WEB\m09c07HW\src\index.html133380901926255729 0
@@ -125,7 +125,7 @@
 94C:\Users\Personal\APX\Nivel 2\M09-ARQUITECTURA-WEB\m09c07HW\node_modules\msgpackr\package.json133378062348760000 0
 90C:\Users\Personal\APX\Nivel 2\M09-ARQUITECTURA-WEB\m09c07HW\node_modules\msgpackr\index.js133378062348760000 0
 95C:\Users\Personal\APX\Nivel 2\M09-ARQUITECTURA-WEB\m09c07HW\node_modules\dom-serializer\lib\esm133379780671148239 1
-88C:\Users\Personal\APX\Nivel 2\M09-ARQUITECTURA-WEB\m09c07HW\src\pages\welcome\welcome.ts133382625744028883 0
+88C:\Users\Personal\APX\Nivel 2\M09-ARQUITECTURA-WEB\m09c07HW\src\pages\welcome\welcome.ts133383492753570436 0
 106C:\Users\Personal\APX\Nivel 2\M09-ARQUITECTURA-WEB\m09c07HW\node_modules\caniuse-lite\data\features\wav.js133379779326170000 0
 78C:\Users\Personal\APX\Nivel 2\M09-ARQUITECTURA-WEB\m09c07HW\node_modules\chalk133379780004428967 1
 89C:\Users\Personal\APX\Nivel 2\M09-ARQUITECTURA-WEB\m09c07HW\src\components\large\large.ts133379913225018073 0
@@ -145,7 +145,7 @@
 90C:\Users\Personal\APX\Nivel 2\M09-ARQUITECTURA-WEB\m09c07HW\node_modules\json5\lib\util.js133378055703730000 0
 100C:\Users\Personal\APX\Nivel 2\M09-ARQUITECTURA-WEB\m09c07HW\node_modules\.bin\update-browserslist-db133379780722274375 0
 81C:\Users\Personal\APX\Nivel 2\M09-ARQUITECTURA-WEB\m09c07HW\src\components\footer133379869805902604 1
-92C:\Users\Personal\APX\Nivel 2\M09-ARQUITECTURA-WEB\m09c07HW\src\pages\thank-you\thank-you.ts133382626188807578 0
+92C:\Users\Personal\APX\Nivel 2\M09-ARQUITECTURA-WEB\m09c07HW\src\pages\thank-you\thank-you.ts133383505187182402 0
 104C:\Users\Personal\APX\Nivel 2\M09-ARQUITECTURA-WEB\m09c07HW\node_modules\caniuse-lite\data\regions\TZ.js133379779326170000 0
 98C:\Users\Personal\APX\Nivel 2\M09-ARQUITECTURA-WEB\m09c07HW\node_modules\svgo\plugins\sortAttrs.js133378055779390000 0
 103C:\Users\Personal\APX\Nivel 2\M09-ARQUITECTURA-WEB\m09c07HW\node_modules\@parcel\optimizer-htmlnano\src133379780411277946 1
@@ -4616,8 +4616,8 @@
 84C:\Users\Personal\APX\Nivel 2\M09-ARQUITECTURA-WEB\m09c07HW\node_modules\.bin\parcel133379780722344302 0
 84C:\Users\Personal\APX\Nivel 2\M09-ARQUITECTURA-WEB\m09c07HW\node_modules\.bin\semver133379780722134515 0
 104C:\Users\Personal\APX\Nivel 2\M09-ARQUITECTURA-WEB\m09c07HW\node_modules\.bin\update-browserslist-db.cmd133379780722264399 0
-83C:\Users\Personal\APX\Nivel 2\M09-ARQUITECTURA-WEB\m09c07HW\dist\index.4d663569.css133382626193149116 0
-87C:\Users\Personal\APX\Nivel 2\M09-ARQUITECTURA-WEB\m09c07HW\dist\index.4d663569.css.map133382626193278995 0
-82C:\Users\Personal\APX\Nivel 2\M09-ARQUITECTURA-WEB\m09c07HW\dist\index.799891e4.js133382626193219045 0
-86C:\Users\Personal\APX\Nivel 2\M09-ARQUITECTURA-WEB\m09c07HW\dist\index.799891e4.js.map133382626193348947 0
-75C:\Users\Personal\APX\Nivel 2\M09-ARQUITECTURA-WEB\m09c07HW\dist\index.html133382609771014038 0
+83C:\Users\Personal\APX\Nivel 2\M09-ARQUITECTURA-WEB\m09c07HW\dist\index.4d663569.css133383505609524918 0
+87C:\Users\Personal\APX\Nivel 2\M09-ARQUITECTURA-WEB\m09c07HW\dist\index.4d663569.css.map133383505609674792 0
+82C:\Users\Personal\APX\Nivel 2\M09-ARQUITECTURA-WEB\m09c07HW\dist\index.799891e4.js133383505609564896 0
+86C:\Users\Personal\APX\Nivel 2\M09-ARQUITECTURA-WEB\m09c07HW\dist\index.799891e4.js.map133383505609674792 0
+75C:\Users\Personal\APX\Nivel 2\M09-ARQUITECTURA-WEB\m09c07HW\dist\index.html133383505609524918 0

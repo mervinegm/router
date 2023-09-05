@@ -51,9 +51,15 @@ export function initStep1(params) {
 
   const buttonEl: any = step1El.querySelector(".button");
 
-  buttonEl.addEventListener("click", function () {
+  console.log(buttonEl);
+
+  const shadowButtonEl: any = buttonEl.shadowRoot.querySelector(".button");
+
+  console.log(shadowButtonEl);
+
+  shadowButtonEl.addEventListener("click", function () {
     console.log("HOLA");
-    /* params.goTo("/thankyou"); */
+    params.goTo("/thankyou");
   });
 
   return step1El;

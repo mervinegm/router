@@ -49,9 +49,15 @@ export function initWelcome(params) {
 
   const buttonEl: any = welcomeEl.querySelector(".button");
 
-  buttonEl.addEventListener("click", function () {
+  console.log(buttonEl);
+
+  const shadowButtonEl: any = buttonEl.shadowRoot.querySelector(".button");
+
+  console.log(shadowButtonEl);
+
+  shadowButtonEl.addEventListener("click", function () {
     console.log("HOLA");
-    /* params.goTo("/step-1"); */
+    params.goTo("/step-1");
   });
 
   return welcomeEl;
