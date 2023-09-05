@@ -655,10 +655,10 @@ function initWelcome(params) {
     const welcomeEl = document.createElement("div");
     welcomeEl.innerHTML = `
   <mi-header>
-  <mi-large aria-label="Header"></mi-large>
-</mi-header>
+    <mi-large aria-label="Header"></mi-large>
+  </mi-header>
 
-<mi-bodycontainer>
+<mi-bodycontainer class="bodyContainer">
   <mi-titulo aria-label="Te damos la bienvenida a esta página"></mi-titulo>
 
   <mi-body aria-label="Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam consequuntur iure voluptas quia accusantium voluptatum aspernatur provident et repudiandae quam veritatis, libero porro sit beatae laboriosam a aut consequatur quidem?"></mi-body>
@@ -668,18 +668,18 @@ function initWelcome(params) {
   <mi-input aria-label="Nombre"></mi-input>
 
   <mi-button class="button" aria-label="Comenzar"></mi-button>
-</mi-bodycontainer>
+  </mi-bodycontainer>
 
 <mi-footer aria-label="Footer">
   <mi-large aria-label="Footer"></mi-large>
 </mi-footer>
 `;
-    const buttonEl = welcomeEl.querySelector(".button");
-    console.log(buttonEl);
-    const shadowButtonEl = buttonEl.shadowRoot.querySelector(".button");
-    console.log(shadowButtonEl);
-    shadowButtonEl.addEventListener("click", function() {
-        console.log("HOLA");
+    const bodycontainerEl = welcomeEl.querySelector(".bodyContainer");
+    console.log(bodycontainerEl);
+    console.log(bodycontainerEl.shadowRoot.querySelector(".bodyContainer"));
+    const shadowBodycontainerEl = bodycontainerEl.shadowRoot.querySelector(".bodyContainer");
+    const buttonEL = shadowBodycontainerEl.childNodes[4];
+    buttonEL.addEventListener("click", function() {
         params.goTo("/step-1");
     });
     return welcomeEl;
@@ -719,7 +719,7 @@ function init() {
             if (this.children[0]) headerDivEl.appendChild(this.children[0]);
         }
     }
-    customElements.define("mi-header", Header);
+    customElements.get("mi-header") || customElements.define("mi-header", Header);
 }
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
@@ -787,7 +787,7 @@ function init() {
             if (clase == "lt2") largeTextpEl.style.margin = "50px 30px 50px 30px";
         }
     }
-    customElements.define("mi-large", Large);
+    customElements.get("mi-large") || customElements.define("mi-large", Large);
 }
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kr52s":[function(require,module,exports) {
@@ -823,7 +823,7 @@ function init() {
             shadow.appendChild(style);
         }
     }
-    customElements.define("mi-titulo", Titulo);
+    customElements.get("mi-titulo") || customElements.define("mi-titulo", Titulo);
 }
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jiJ8U":[function(require,module,exports) {
@@ -860,7 +860,7 @@ function init() {
             shadow.appendChild(style);
         }
     }
-    customElements.define("mi-body", Body);
+    customElements.get("mi-body") || customElements.define("mi-body", Body);
 }
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6CIWl":[function(require,module,exports) {
@@ -897,7 +897,7 @@ function init() {
             shadow.appendChild(style);
         }
     }
-    customElements.define("mi-subtitulo", Subtitulo);
+    customElements.get("mi-subtitulo") || customElements.define("mi-subtitulo", Subtitulo);
 }
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jzypA":[function(require,module,exports) {
@@ -932,13 +932,10 @@ function init() {
                         }
                         `;
             shadow.appendChild(style);
-            if (this.children) for (var i of this.children){
-                console.log(i);
-                bodyContainerEl.appendChild(i.cloneNode(true));
-            }
+            if (this.children) for (var i of this.children)bodyContainerEl.appendChild(i.cloneNode(true));
         }
     }
-    customElements.define("mi-bodycontainer", BodyContainer);
+    customElements.get("mi-bodycontainer") || customElements.define("mi-bodycontainer", BodyContainer);
 }
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fIx3g":[function(require,module,exports) {
@@ -994,7 +991,7 @@ function init() {
         `;
         }
     }
-    customElements.define("mi-input", Input);
+    customElements.get("mi-input") || customElements.define("mi-input", Input);
 }
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9lSjy":[function(require,module,exports) {
@@ -1031,10 +1028,9 @@ function init() {
                       }
                       `;
             shadow.appendChild(style);
-            if (this.children[0]) buttonEL.appendChild(this.children[0]);
         }
     }
-    customElements.define("mi-button", Button);
+    customElements.get("mi-button") || customElements.define("mi-button", Button);
 }
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bobkX":[function(require,module,exports) {
@@ -1074,7 +1070,7 @@ function init() {
             if (this.children[0]) outlinedEl.appendChild(this.children[0]);
         }
     }
-    customElements.define("mi-outlined", Outlined);
+    customElements.get("mi-outlined") || customElements.define("mi-outlined", Outlined);
 }
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jMkhk":[function(require,module,exports) {
@@ -1098,7 +1094,8 @@ function init() {
             style.textContent = `
                   .footer{
                     width: auto;
-                    height: 233px;
+                    min-height: 233px;
+                    max-height: 100vmax;
                     background-color: cadetblue;
                     margin: 0;
                     padding: 0;
@@ -1112,7 +1109,7 @@ function init() {
             if (this.children[0]) footerDivEl.appendChild(this.children[0]);
         }
     }
-    customElements.define("mi-footer", Footer);
+    customElements.get("mi-footer") || customElements.define("mi-footer", Footer);
 }
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iVva3":[function(require,module,exports) {
@@ -1172,7 +1169,7 @@ function init() {
           `;
         }
     }
-    customElements.define("mi-select", Select);
+    customElements.get("mi-select") || customElements.define("mi-select", Select);
 }
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2N3EM":[function(require,module,exports) {
@@ -1208,7 +1205,7 @@ function initStep1(params) {
     <mi-large aria-label="Header"></mi-large>
   </mi-header>
 
-  <mi-bodycontainer>
+  <mi-bodycontainer class="bodyContainer">
     <mi-titulo aria-label="Necesitamos algunos datos más"></mi-titulo>
 
     <mi-input aria-label="Email"></mi-input>
@@ -1218,21 +1215,23 @@ function initStep1(params) {
     <mi-select aria-label="Sexo"></mi-select>
 
     <mi-button class="button" aria-label="Continuar"></mi-button>
-
+    
     <mi-outlined aria-label="Volver"></mi-outlined>
-  </mi-bodycontainer>
+    </mi-bodycontainer>
 
   <mi-footer>
      <mi-large aria-label="Footer"></mi-large>
   </mi-footer>
   `;
-    const buttonEl = step1El.querySelector(".button");
-    console.log(buttonEl);
-    const shadowButtonEl = buttonEl.shadowRoot.querySelector(".button");
-    console.log(shadowButtonEl);
-    shadowButtonEl.addEventListener("click", function() {
-        console.log("HOLA");
+    const bodycontainerEl = step1El.querySelector(".bodyContainer");
+    const shadowBodycontainerEl = bodycontainerEl.shadowRoot.querySelector(".bodyContainer");
+    const buttonEL = shadowBodycontainerEl.childNodes[4];
+    const outlinedEl = shadowBodycontainerEl.childNodes[5];
+    buttonEL.addEventListener("click", function() {
         params.goTo("/thankyou");
+    });
+    outlinedEl.addEventListener("click", function() {
+        params.goTo("/welcome");
     });
     return step1El;
 }
@@ -1270,24 +1269,22 @@ function initThankYou(params) {
      <mi-large aria-label="Header"></mi-large>
   </mi-header>
 
-  <mi-bodycontainer>
+  <mi-bodycontainer class="bodyContainer">
     <mi-titulo aria-label="Gracias"></mi-titulo>
 
     <mi-large aria-label="Toda la información que nos brindaste es muy importante"></mi-large>
 
     <mi-button class="button" aria-label="De nada"></mi-button>
-  </mi-bodycontainer>
+    </mi-bodycontainer>
 
   <mi-footer>
     <mi-large aria-label="Footer"></mi-large>
   </mi-footer>
   `;
-    const buttonEl = thankYouEl.querySelector(".button");
-    console.log(buttonEl);
-    const shadowButtonEl = buttonEl.shadowRoot.querySelector(".button");
-    console.log(shadowButtonEl);
-    shadowButtonEl.addEventListener("click", function() {
-        console.log("HOLA");
+    const bodycontainerEl = thankYouEl.querySelector(".bodyContainer");
+    const shadowBodycontainerEl = bodycontainerEl.shadowRoot.querySelector(".bodyContainer");
+    const buttonEL = shadowBodycontainerEl.childNodes[2];
+    buttonEL.addEventListener("click", function() {
         params.goTo("/welcome");
     });
     return thankYouEl;

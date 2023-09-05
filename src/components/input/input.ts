@@ -51,5 +51,5 @@ export function init() {
     }
   }
 
-  customElements.define("mi-input", Input);
+  customElements.get("mi-input") || customElements.define("mi-input", Input);
 }

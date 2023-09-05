@@ -27,10 +27,10 @@ export function initWelcome(params) {
 
   welcomeEl.innerHTML = `
   <mi-header>
-  <mi-large aria-label="Header"></mi-large>
-</mi-header>
+    <mi-large aria-label="Header"></mi-large>
+  </mi-header>
 
-<mi-bodycontainer>
+<mi-bodycontainer class="bodyContainer">
   <mi-titulo aria-label="Te damos la bienvenida a esta página"></mi-titulo>
 
   <mi-body aria-label="Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam consequuntur iure voluptas quia accusantium voluptatum aspernatur provident et repudiandae quam veritatis, libero porro sit beatae laboriosam a aut consequatur quidem?"></mi-body>
@@ -40,23 +40,25 @@ export function initWelcome(params) {
   <mi-input aria-label="Nombre"></mi-input>
 
   <mi-button class="button" aria-label="Comenzar"></mi-button>
-</mi-bodycontainer>
+  </mi-bodycontainer>
 
 <mi-footer aria-label="Footer">
   <mi-large aria-label="Footer"></mi-large>
 </mi-footer>
 `;
 
-  const buttonEl: any = welcomeEl.querySelector(".button");
+  const bodycontainerEl: any = welcomeEl.querySelector(".bodyContainer");
 
-  console.log(buttonEl);
+  console.log(bodycontainerEl);
 
-  const shadowButtonEl: any = buttonEl.shadowRoot.querySelector(".button");
+  console.log(bodycontainerEl.shadowRoot.querySelector(".bodyContainer"));
 
-  console.log(shadowButtonEl);
+  const shadowBodycontainerEl: any =
+    bodycontainerEl.shadowRoot.querySelector(".bodyContainer");
 
-  shadowButtonEl.addEventListener("click", function () {
-    console.log("HOLA");
+  const buttonEL: any = shadowBodycontainerEl.childNodes[4];
+
+  buttonEL.addEventListener("click", function () {
     params.goTo("/step-1");
   });
 

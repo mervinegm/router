@@ -30,5 +30,5 @@ export function init() {
     }
   }
 
-  customElements.define("mi-titulo", Titulo);
+  customElements.get("mi-titulo") || customElements.define("mi-titulo", Titulo);
 }

@@ -37,5 +37,6 @@ export function init() {
     }
   }
 
-  customElements.define("mi-outlined", Outlined);
+  customElements.get("mi-outlined") ||
+    customElements.define("mi-outlined", Outlined);
 }

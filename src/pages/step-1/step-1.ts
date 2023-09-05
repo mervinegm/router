@@ -30,7 +30,7 @@ export function initStep1(params) {
     <mi-large aria-label="Header"></mi-large>
   </mi-header>
 
-  <mi-bodycontainer>
+  <mi-bodycontainer class="bodyContainer">
     <mi-titulo aria-label="Necesitamos algunos datos más"></mi-titulo>
 
     <mi-input aria-label="Email"></mi-input>
@@ -40,26 +40,30 @@ export function initStep1(params) {
     <mi-select aria-label="Sexo"></mi-select>
 
     <mi-button class="button" aria-label="Continuar"></mi-button>
-
+    
     <mi-outlined aria-label="Volver"></mi-outlined>
-  </mi-bodycontainer>
+    </mi-bodycontainer>
 
   <mi-footer>
      <mi-large aria-label="Footer"></mi-large>
   </mi-footer>
   `;
 
-  const buttonEl: any = step1El.querySelector(".button");
+  const bodycontainerEl: any = step1El.querySelector(".bodyContainer");
 
-  console.log(buttonEl);
+  const shadowBodycontainerEl: any =
+    bodycontainerEl.shadowRoot.querySelector(".bodyContainer");
 
-  const shadowButtonEl: any = buttonEl.shadowRoot.querySelector(".button");
+  const buttonEL: any = shadowBodycontainerEl.childNodes[4];
 
-  console.log(shadowButtonEl);
+  const outlinedEl: any = shadowBodycontainerEl.childNodes[5];
 
-  shadowButtonEl.addEventListener("click", function () {
-    console.log("HOLA");
+  buttonEL.addEventListener("click", function () {
     params.goTo("/thankyou");
+  });
+
+  outlinedEl.addEventListener("click", function () {
+    params.goTo("/welcome");
   });
 
   return step1El;

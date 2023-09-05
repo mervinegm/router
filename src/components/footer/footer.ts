@@ -16,7 +16,8 @@ export function init() {
       style.textContent = `
                   .footer{
                     width: auto;
-                    height: 233px;
+                    min-height: 233px;
+                    max-height: 100vmax;
                     background-color: cadetblue;
                     margin: 0;
                     padding: 0;
@@ -34,5 +35,5 @@ export function init() {
     }
   }
 
-  customElements.define("mi-footer", Footer);
+  customElements.get("mi-footer") || customElements.define("mi-footer", Footer);
 }

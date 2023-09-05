@@ -33,5 +33,5 @@ export function init() {
     }
   }
 
-  customElements.define("mi-header", Header);
+  customElements.get("mi-header") || customElements.define("mi-header", Header);
 }

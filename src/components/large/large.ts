@@ -36,5 +36,5 @@ export function init() {
     }
   }
 
-  customElements.define("mi-large", Large);
+  customElements.get("mi-large") || customElements.define("mi-large", Large);
 }

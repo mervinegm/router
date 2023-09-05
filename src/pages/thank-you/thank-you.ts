@@ -30,29 +30,27 @@ export function initThankYou(params) {
      <mi-large aria-label="Header"></mi-large>
   </mi-header>
 
-  <mi-bodycontainer>
+  <mi-bodycontainer class="bodyContainer">
     <mi-titulo aria-label="Gracias"></mi-titulo>
 
     <mi-large aria-label="Toda la información que nos brindaste es muy importante"></mi-large>
 
     <mi-button class="button" aria-label="De nada"></mi-button>
-  </mi-bodycontainer>
+    </mi-bodycontainer>
 
   <mi-footer>
     <mi-large aria-label="Footer"></mi-large>
   </mi-footer>
   `;
 
-  const buttonEl: any = thankYouEl.querySelector(".button");
+  const bodycontainerEl: any = thankYouEl.querySelector(".bodyContainer");
 
-  console.log(buttonEl);
+  const shadowBodycontainerEl: any =
+    bodycontainerEl.shadowRoot.querySelector(".bodyContainer");
 
-  const shadowButtonEl: any = buttonEl.shadowRoot.querySelector(".button");
+  const buttonEL: any = shadowBodycontainerEl.childNodes[2];
 
-  console.log(shadowButtonEl);
-
-  shadowButtonEl.addEventListener("click", function () {
-    console.log("HOLA");
+  buttonEL.addEventListener("click", function () {
     params.goTo("/welcome");
   });
 

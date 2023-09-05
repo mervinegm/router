@@ -31,5 +31,5 @@ export function init() {
     }
   }
 
-  customElements.define("mi-body", Body);
+  customElements.get("mi-body") || customElements.define("mi-body", Body);
 }

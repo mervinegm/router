@@ -31,5 +31,6 @@ export function init() {
     }
   }
 
-  customElements.define("mi-subtitulo", Subtitulo);
+  customElements.get("mi-subtitulo") ||
+    customElements.define("mi-subtitulo", Subtitulo);
 }

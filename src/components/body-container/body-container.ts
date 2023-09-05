@@ -30,12 +30,12 @@ export function init() {
 
       if (this.children) {
         for (var i of this.children) {
-          console.log(i);
           bodyContainerEl.appendChild(i.cloneNode(true));
         }
       }
     }
   }
 
-  customElements.define("mi-bodycontainer", BodyContainer);
+  customElements.get("mi-bodycontainer") ||
+    customElements.define("mi-bodycontainer", BodyContainer);
 }

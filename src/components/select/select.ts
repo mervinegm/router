@@ -55,5 +55,5 @@ export function init() {
     }
   }
 
-  customElements.define("mi-select", Select);
+  customElements.get("mi-select") || customElements.define("mi-select", Select);
 }

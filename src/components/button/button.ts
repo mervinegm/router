@@ -30,12 +30,8 @@ export function init() {
                       }
                       `;
       shadow.appendChild(style);
-
-      if (this.children[0]) {
-        buttonEL.appendChild(this.children[0]);
-      }
     }
   }
 
-  customElements.define("mi-button", Button);
+  customElements.get("mi-button") || customElements.define("mi-button", Button);
 }
