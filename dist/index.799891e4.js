@@ -658,22 +658,22 @@ function initWelcome(params) {
     <mi-large aria-label="Header"></mi-large>
   </mi-header>
 
-<mi-bodycontainer class="bodyContainer">
-  <mi-titulo aria-label="Te damos la bienvenida a esta página"></mi-titulo>
+  <mi-bodycontainer class="bodyContainer">
+    <mi-titulo aria-label="Te damos la bienvenida a esta página"></mi-titulo>
 
-  <mi-body aria-label="Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam consequuntur iure voluptas quia accusantium voluptatum aspernatur provident et repudiandae quam veritatis, libero porro sit beatae laboriosam a aut consequatur quidem?"></mi-body>
+    <mi-body aria-label="Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam consequuntur iure voluptas quia accusantium voluptatum aspernatur provident et repudiandae quam veritatis, libero porro sit beatae laboriosam a aut consequatur quidem?"></mi-body>
 
-  <mi-large aria-label="Para continuar ingresá tu nombre"></mi-large>
+    <mi-large aria-label="Para continuar ingresá tu nombre"></mi-large>
 
-  <mi-input aria-label="Nombre"></mi-input>
+    <mi-input aria-label="Nombre"></mi-input>
 
-  <mi-button class="button" aria-label="Comenzar"></mi-button>
+    <mi-button class="button" aria-label="Comenzar"></mi-button>
   </mi-bodycontainer>
 
-<mi-footer aria-label="Footer">
-  <mi-large aria-label="Footer"></mi-large>
-</mi-footer>
-`;
+  <mi-footer aria-label="Footer">
+    <mi-large aria-label="Footer"></mi-large>
+  </mi-footer>
+  `;
     const bodycontainerEl = welcomeEl.querySelector(".bodyContainer");
     console.log(bodycontainerEl);
     console.log(bodycontainerEl.shadowRoot.querySelector(".bodyContainer"));
@@ -722,36 +722,6 @@ function init() {
     customElements.get("mi-header") || customElements.define("mi-header", Header);
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, "__esModule", {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
 },{}],"jroDw":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
@@ -790,7 +760,37 @@ function init() {
     customElements.get("mi-large") || customElements.define("mi-large", Large);
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kr52s":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"kr52s":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "init", ()=>init);
@@ -956,7 +956,12 @@ function init() {
             var fieldsetInputEl = document.createElement("div");
             fieldsetInputEl.classList.add("fieldsetInput");
             shadow.appendChild(fieldsetInputEl);
+            fieldsetInputEl.innerHTML = `
+        <label class="label" for="Nombre">${label}</label>
+        <input class="input" type="text" placeholder="Ingrese su ${label}">
+        `;
             var style = document.createElement("style");
+            shadow.appendChild(style);
             style.textContent = `
                         .fieldsetInput{
                           display: flex;
@@ -984,11 +989,6 @@ function init() {
                           border-radius: 4px;
                         }
                         `;
-            shadow.appendChild(style);
-            fieldsetInputEl.innerHTML = `
-        <label class="label" for="Nombre">${label}</label>
-        <input class="input" type="text" placeholder="Ingrese su ${label}">
-        `;
         }
     }
     customElements.get("mi-input") || customElements.define("mi-input", Input);

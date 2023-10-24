@@ -13,8 +13,13 @@ export function init() {
       var fieldsetInputEl = document.createElement("div");
       fieldsetInputEl.classList.add("fieldsetInput");
       shadow.appendChild(fieldsetInputEl);
+      fieldsetInputEl.innerHTML = `
+        <label class="label" for="Nombre">${label}</label>
+        <input class="input" type="text" placeholder="Ingrese su ${label}">
+        `;
 
       var style = document.createElement("style");
+      shadow.appendChild(style);
       style.textContent = `
                         .fieldsetInput{
                           display: flex;
@@ -42,12 +47,6 @@ export function init() {
                           border-radius: 4px;
                         }
                         `;
-      shadow.appendChild(style);
-
-      fieldsetInputEl.innerHTML = `
-        <label class="label" for="Nombre">${label}</label>
-        <input class="input" type="text" placeholder="Ingrese su ${label}">
-        `;
     }
   }
 

@@ -30,22 +30,22 @@ export function initWelcome(params) {
     <mi-large aria-label="Header"></mi-large>
   </mi-header>
 
-<mi-bodycontainer class="bodyContainer">
-  <mi-titulo aria-label="Te damos la bienvenida a esta página"></mi-titulo>
+  <mi-bodycontainer class="bodyContainer">
+    <mi-titulo aria-label="Te damos la bienvenida a esta página"></mi-titulo>
 
-  <mi-body aria-label="Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam consequuntur iure voluptas quia accusantium voluptatum aspernatur provident et repudiandae quam veritatis, libero porro sit beatae laboriosam a aut consequatur quidem?"></mi-body>
+    <mi-body aria-label="Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam consequuntur iure voluptas quia accusantium voluptatum aspernatur provident et repudiandae quam veritatis, libero porro sit beatae laboriosam a aut consequatur quidem?"></mi-body>
 
-  <mi-large aria-label="Para continuar ingresá tu nombre"></mi-large>
+    <mi-large aria-label="Para continuar ingresá tu nombre"></mi-large>
 
-  <mi-input aria-label="Nombre"></mi-input>
+    <mi-input aria-label="Nombre"></mi-input>
 
-  <mi-button class="button" aria-label="Comenzar"></mi-button>
+    <mi-button class="button" aria-label="Comenzar"></mi-button>
   </mi-bodycontainer>
 
-<mi-footer aria-label="Footer">
-  <mi-large aria-label="Footer"></mi-large>
-</mi-footer>
-`;
+  <mi-footer aria-label="Footer">
+    <mi-large aria-label="Footer"></mi-large>
+  </mi-footer>
+  `;
 
   const bodycontainerEl: any = welcomeEl.querySelector(".bodyContainer");
 
